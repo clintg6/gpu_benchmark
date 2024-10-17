@@ -11,7 +11,7 @@ export TORCH_BLAS_PREFER_HIPBLASLT=0
 Once installation is complete, you can run a reproducible benchmark across PyTorch versions using the following command:
 
 ```python
-ROCR_VISIBLE_DEVICES=0 ./mamf-finder.py --n_trials 100 --num_warmup_iterations 5 --seed 42
+ROCR_VISIBLE_DEVICES=0 ./mamf-finder-reproducible.py --n_trials 100 --num_warmup_iterations 5 --seed 42
 ```
 
 # Theoretical TFLOPS ≠ Real-world Performance
