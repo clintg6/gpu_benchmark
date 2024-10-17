@@ -1,3 +1,19 @@
+# Recommended Procedure for AMD GPUs
+
+Before beginning the GPU benchmark, be sure to properly set the environmental variables
+
+```bash
+export HIP_FORCE_DEV_KERNARG=1
+export HSA_OVERRIDE_CPU_AFFINITY_DEBUG=0
+export TORCH_BLAS_PREFER_HIPBLASLT=0
+```
+
+Once installation is complete, you can run a reproducible benchmark across PyTorch versions using the following command:
+
+```python
+ROCR_VISIBLE_DEVICES=0 ./mamf-finder.py --n_trials 100 --num_warmup_iterations 5 --seed 42
+```
+
 # Theoretical TFLOPS ≠ Real-world Performance
 # Testing Theoretical Maximum FLOPS on GPUs
 
